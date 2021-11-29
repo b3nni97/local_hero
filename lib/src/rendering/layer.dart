@@ -162,7 +162,7 @@ class LocalHeroLayer extends ContainerLayer {
 
   @override
   void addToScene(ui.SceneBuilder builder, [Offset layerOffset = Offset.zero]) {
-    if (controller.link.leader == null) {
+    if (!controller.link.leaderConnected) {
       _lastTransform = null;
       _lastOffset = null;
       _inverseDirty = true;
